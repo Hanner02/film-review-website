@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'AWAD___Coursework___Hannah_Smith.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'FilmReview',
+        'NAME': 'filmreview',
         'USER':'admin',
         'PASSWORD': 'password',
         'HOST':'localhost',
