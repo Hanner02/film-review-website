@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/search.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="btn"><a href="{% url 'home' %}">Home</a></div>
+            <div class="btn"><a href="{% url 'search_films' %}">Search</a></div>
+            <div class="btn"><a href="{% url 'add' %}">Add Review</a></div>
+            <div class="btn"><a href="{% url 'show' %}">Review List</a></div>
+            <div class="btn"><a href="{% url 'login' %}">Log Out</a></div>
+        </div>
+        <h1>Search for Films</h1>
+
+
+        <form method="GET" action="{% url 'search_films' %}" class="search-container">
+            <input type="text" name="q" class="search-bar" placeholder="Search for a film...">
+        </form>
+
+        <div class="film-list">
+            <div class="film-item">
+                <img src="https://th.bing.com/th/id/OIP.PkZ82N6hoUKjSuMdTbR31gAAAA?rs=1&pid=ImgDetMain" alt="Film 1">
+                <h3>Deadpool 3</h3>
+                <p>lots of fighting</p>
+            </div>
+
+            <div class="film-item">
+                <img src="https://i0.wp.com/glenn.zucman.com/i2va/wp-content/uploads/2016/09/The-Matrix-Poster.jpg" alt="Film 2">
+                <h3>The Matrix</h3>
+                <p>Crazy bruv</p>
+            </div>
+            <div class="film-item">
+                <img src="https://th.bing.com/th/id/OIP.VPTXMvsmczGn-350rVxsiwAAAA?rs=1&pid=ImgDetMain" alt="Film 3">
+                <h3>Inside out 2</h3>
+                <p>Anxiety is a bitch</p>
+            </div>
+
+
+            <div class="film-list">
+                {% for film in films %}
+                <div class="film-item">
+                    <img src="{{ film.image_url }}" alt="{{ film.title }}">
+                    <h3>{{ film.title }}</h3>
+                    <p>{{ film.description }}</p>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </main>
+</body>
+</html>

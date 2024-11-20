@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/mystyle.css">
+    <link rel="script" href="/static/home.js">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="container">
+            <div class="btn"><a href="{% url 'home' %}">Home</a></div>
+            <div class="btn"><a href="{% url 'search_films' %}">Search</a></div>
+            <div class="btn"><a href="{% url 'add' %}">Add Review</a></div>
+            <div class="btn"><a href="{% url 'show' %}">Review List</a></div>
+            <div class="btn"><a href="{% url 'login' %}">Log Out</a></div>
+        </div>
+        <section class="content">
+            <header class="site-header">
+                <h1>CineView</h1>
+            </header>
+            <div class="slider-container">
+                <h2>Popular Movies</h2>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="https://th.bing.com/th/id/OIP.PkZ82N6hoUKjSuMdTbR31gAAAA?rs=1&pid=ImgDetMain" />
+                            <div class="slide-overlay">
+                                <h3>Deadpool 3</h3>
+                                <button>
+                                    <a href="{% url 'log' %}">
+                                        Review Now <i class="fa-solid fa-circle-play"></i>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://i0.wp.com/glenn.zucman.com/i2va/wp-content/uploads/2016/09/The-Matrix-Poster.jpg" />
+                            <div class="slide-overlay">
+                                <h3>The Matrix</h3>
+                                <button>
+                                    <a href="{% url 'log' %}">
+                                        Review Now <i class="fa-solid fa-circle-play"></i>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://th.bing.com/th/id/R.d0d2ba83fd427c5b26abefe2646a5c4b?rik=8KqDeronayGRdw&pid=ImgRaw&r=0" />
+                            <div class="slide-overlay">
+                                <h3>Spider Man: No way home</h3>
+                                <button>
+                                    <a href="{% url 'log' %}">
+                                        Review Now <i class="fa-solid fa-circle-play"></i>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://i0.wp.com/jennyinneverland.com/wp-content/uploads/2016/01/515275-150413.jpg?ssl=1" />
+                            <div class="slide-overlay">
+                                <h3>Star Wars: The force awakens</h3>
+                                <button>
+                                    <a href="{% url 'log' %}">
+                                        Review Now <i class="fa-solid fa-circle-play"></i>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://th.bing.com/th/id/R.fb8b7f6d125765799cdbad58fbd1aaee?rik=2R5E3OkGRYpOdA&pid=ImgRaw&r=0" />
+                            <div class="slide-overlay">
+                                <h3>Finding Dory</h3>
+                                <button>
+                                    <a href="{% url 'log' %}">
+                                        Review Now <i class="fa-solid fa-circle-play"></i>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://th.bing.com/th/id/OIP.VPTXMvsmczGn-350rVxsiwAAAA?rs=1&pid=ImgDetMain" />
+                            <div class="slide-overlay">
+                                <h3>Inside Out 2</h3>
+                                <button>
+                                    <a href="{% url 'log' %}">
+                                        Review Now <i class="fa-solid fa-circle-play"></i>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://th.bing.com/th/id/OIP.xsaiZG-PHM6vhVfhpZviEgHaK-?rs=1&pid=ImgDetMain" />
+                            <div class="slide-overlay">
+                                <h3>Gardians of the Galaxy vol.2</h3>
+                                <button>
+                                    <a href="{% url 'log' %}">
+                                        Review Now <i class="fa-solid fa-circle-play"></i>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="https://assets.mycast.io/actor_images/actor-the-chronicles-of-narnia-voyage-of-the-dawn-treader-298537_large.jpg?1636407517" />
+                            <div class="slide-overlay">
+                                <h3>Narnia: Voyage of the Dawn Treader</h3>
+                                <button>
+                                    <a href="{% url 'log' %}">
+                                        Review Now <i class="fa-solid fa-circle-play"></i>
+                                    </a>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
